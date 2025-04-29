@@ -34,8 +34,8 @@ function App() {
     <>
       <div className="vert_div">
         <Content_Panel class_name="left_vert">
-          <Book />
-          <Book />
+          <Book project_name="Project 1" />
+          <Book project_name="Project 2" />
         </Content_Panel>
 
         <Content_Panel class_name="main_vert">

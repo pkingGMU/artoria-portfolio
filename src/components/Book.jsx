@@ -1,39 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
-function Book() {
+function Book({ project_name }) {
   function book_interact() {
     console.log("Book Interact");
   }
-
-  const [num_top, set_num_top] = useState(0);
-  const [num_left, set_num_left] = useState(0);
-
-  useEffect(() => {
-    generate_random();
-  }, []);
-
-  const generate_random = () => {
-    const top_min = 5;
-    const top_max = 90;
-    const left_min = 1;
-    const left_max = 10;
-
-    const num_top =
-      Math.floor(Math.random() * (top_max - top_min + 1)) + top_min;
-    set_num_top(num_top);
-
-    const num_left =
-      Math.floor(Math.random() * (left_max - left_min + 1)) + left_min;
-    set_num_left(num_left);
-  };
-
-  const my_style = {
-    top: num_top + "%",
-    left: num_left + "%",
-  };
-
-  console.log(my_style);
 
   return (
     <motion.div
@@ -50,12 +21,14 @@ function Book() {
         repeatType: "loop",
         ease: "easeInOut",
       }}
-      style={my_style}
-      className="book_div"
+      className="book_rect_div"
     >
-      <button className="book_button" onClick={book_interact}>
-        <img src="/src/assets/Sprites/book.svg" />
-      </button>
+      <h1>{project_name}</h1>
+      <div className="book_div">
+        <button className="book_button" onClick={book_interact}>
+          <img src="/src/assets/Sprites/book.svg" />
+        </button>
+      </div>
     </motion.div>
   );
 }
