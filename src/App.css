@@ -1,25 +1,23 @@
 @font-face {
-    font-family: 'Yoster';
-    src: url('./assets/fonts/yoster.ttf') format('truetype');
+    font-family: "Yoster";
+    src: url("./assets/fonts/yoster.ttf") format("truetype");
     font-weight: normal;
     font-style: normal;
 }
-
-
 
 body #root {
     height: 100%;
     margin: 0;
     padding: 2rem;
     text-align: center;
-    font-family: 'Yoster';
+    font-family: "Yoster";
     line-height: 1.5;
     font-weight: 400;
     font-synthesis: none;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    
+
     --background: #ffffff;
     --background-gradient-2: #fee290;
     --background-gradient-1: #a6caa5;
@@ -28,30 +26,32 @@ body #root {
     --icon-color: #596627;
     --foreground-main: #feeec2;
     --button-color: #b2ba75;
-
 }
 
 .logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+    height: 6em;
+    padding: 1.5em;
+    will-change: filter;
+    transition: filter 300ms;
 }
 .logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+    filter: drop-shadow(0 0 2em #646cffaa);
 }
 .logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+    filter: drop-shadow(0 0 2em #61dafbaa);
 }
 
-html, body {
+html,
+body {
     margin: 0;
     height: 100%;
     width: 100%;
-    background: linear-gradient(var(--background-gradient-1), var(--background-gradient-2));
+    background: linear-gradient(
+        var(--background-gradient-1),
+        var(--background-gradient-2)
+    );
     color: var(--text-color);
     padding: 1px;
-    
 }
 
 .vert_div {
@@ -61,7 +61,6 @@ html, body {
 }
 
 #root .main_vert {
-
     height: 100vh;
     width: 30vw;
     margin: 0 auto;
@@ -88,23 +87,18 @@ html, body {
     margin: 0 auto;
 }
 
-.main_vert .main_box{
+.main_vert .main_box {
     margin-top: calc(50vh - 15vw);
     background-color: var(--foreground-main);
-    height: calc(30vw) ; 
-    border: .5rem solid;
+    height: calc(30vw);
+    border: 0.5rem solid;
     border-radius: 2vw;
     border-color: var(--text-color);
     width: 100%;
-
 }
 
 .main_box .urmom {
-    
 }
-
-
-
 
 .main_vert .social_box {
     height: 5vh;
@@ -114,7 +108,6 @@ html, body {
     justify-content: space-evenly;
     align-items: center;
     margin-bottom: 10vh;
-    
 }
 
 .left_vert .book_rect_div {
@@ -145,7 +138,7 @@ html, body {
 
 .book_div .book_button {
     border-radius: 50%;
-    display:flex;
+    display: flex;
     align-items: center;
     justify-content: center;
     background: var(--button-color);
@@ -155,7 +148,7 @@ html, body {
     padding: 0;
 }
 
-.book_button img{
+.book_button img {
     max-width: 60%;
     max-height: 60%;
 }
@@ -169,31 +162,51 @@ html, body {
     font-weight: 500;
     font-family: inherit;
     background-color: var(--button-color);
-
 }
 
 .icon_button img {
     height: 60%;
-    filter: invert(35%) sepia(61%) saturate(417%) hue-rotate(32deg) brightness(90%) contrast(89%);    
+    filter: invert(35%) sepia(61%) saturate(417%) hue-rotate(32deg)
+        brightness(90%) contrast(89%);
 }
 
+.popup_overlay {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background-color: rgba(0, 0.1, 0, 0.9);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+}
+
+.popup_overlay .popup_box {
+    padding: 40px;
+    background-color: rgba(0.1, 0.1, 0, 0.3);
+    height: 80%;
+    width: 50%;
+}
 
 @keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+    a:nth-of-type(2) .logo {
+        animation: logo-spin infinite 20s linear;
+    }
 }
 
 .card {
-  padding: 2em;
+    padding: 2em;
 }
-
