@@ -5,7 +5,7 @@ export default function IconButton({ img, alt, id, link }) {
                 className="icon_button"
                 type="button"
                 id={id}
-                onClick={() => onClick({ link })}
+                onClick={() => onClick(link)}
             >
                 <img src={img} alt={alt} />
             </button>
@@ -13,6 +13,6 @@ export default function IconButton({ img, alt, id, link }) {
     );
 }
 
-function onClick({ link }) {
-    window.open({ link });
+function onClick(link) {
+    window.open(link);
 }

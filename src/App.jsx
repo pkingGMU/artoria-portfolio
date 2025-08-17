@@ -15,6 +15,15 @@ function Main_Box({ message }) {
   return (
     <div className="main_box">
       <h1 className="urmom"> {message} </h1>
+      <p>
+        My name is Patrick King and I am a self taught dev. I mostly enjoy
+        making unfinshed games in lua, java, and C#. For work I do data analysis
+        and signal processing for Kinesiology and Biomechanics devices. I've
+        worked with: motion capture data, kinematic data, kinetic data, front
+        facing lab applications, and IMU data. My hobbies inlcude leetcode,
+        watching tsdoing on YouTube and playing video games (hence the stardew
+        valley theme)
+      </p>
     </div>
   );
 }
@@ -58,13 +67,18 @@ function App() {
               id="1"
               link="https://github.com/pkingGMU"
             />
-
-            <button className="icon_button" type="button" id="2">
-              <img src="/src/assets/Icons/icons8-youtube.svg" alt="YoutTube" />
-            </button>
-            <button className="icon_button" type="button" id="3">
-              <img src="/src/assets/Icons/icons8-linkedin.svg" alt="GitHub" />
-            </button>
+            <IconButton
+              img="/src/assets/Icons/icons8-youtube.svg"
+              alt="YouTube"
+              id="2"
+              link="https://www.youtube.com/@artoria-codes/streams"
+            />
+            <IconButton
+              img="/src/assets/Icons/icons8-linkedin.svg"
+              alt="LinkedIn"
+              id="3"
+              link="https://www.linkedin.com/in/pkinggmu/"
+            />
           </div>
 
           {active_book && (
@@ -75,7 +89,21 @@ function App() {
           )}
         </Content_Panel>
 
-        <Content_Panel class_name="right_vert"></Content_Panel>
+        <Content_Panel class_name="right_vert">
+          {" "}
+          <Book
+            project_name="Project 3"
+            onClick={() => set_active_book("Project 3")}
+          />
+          <Book
+            project_name="Project 4"
+            onClick={() => set_active_book("Project 4")}
+          />
+          <Book
+            project_name="Project 5"
+            onClick={() => set_active_book("Project 5")}
+          />
+        </Content_Panel>
       </div>
     </>
   );

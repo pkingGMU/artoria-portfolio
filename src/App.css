@@ -71,7 +71,8 @@ body {
     align-items: center;
 }
 
-#root .left_vert {
+#root .left_vert,
+.right_vert {
     height: 100vh;
     width: 33vw;
     margin: 0 auto;
@@ -79,12 +80,6 @@ body {
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-}
-
-#root .right_vert {
-    height: 100vh;
-    width: 33vw;
-    margin: 0 auto;
 }
 
 .main_vert .main_box {
@@ -95,6 +90,7 @@ body {
     border-radius: 2vw;
     border-color: var(--text-color);
     width: 100%;
+
 }
 
 .main_box .urmom {
@@ -108,16 +104,6 @@ body {
     justify-content: space-evenly;
     align-items: center;
     margin-bottom: 10vh;
-}
-
-.left_vert .book_rect_div {
-    width: 3vw;
-    height: 3vw;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-    margin: 0;
 }
 
 .book_rect_div h1 {
