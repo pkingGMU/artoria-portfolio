@@ -81,7 +81,7 @@ body {
     align-items: center;
 }
 
-.left_vert ul {
+ul {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -92,7 +92,7 @@ body {
     margin: 0;
 }
 
-.left_vert ul li {
+ul li {
     list-style-type: none;
     background-color: var(--text-color);
     height: 5%;

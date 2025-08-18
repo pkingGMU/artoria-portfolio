@@ -34,7 +34,7 @@ function App() {
     });
   }
 
-  const project_data = {
+  const project_data_left = {
     NIH_ACTIVITY: {
       project_name: "3-Axis Accelerometer Activity Classification",
       description: "Test Description",
@@ -45,13 +45,19 @@ function App() {
     },
   };
 
+  const project_data_right = {
+    Project_3: {
+      project_name: "Bruh",
+      description: "Bruh Description",
+    },
+  };
   const [active_book, set_active_book] = useState(null);
 
   return (
     <>
       <div className="vert_div">
         <Content_Panel class_name="left_vert">
-          <BookShelf />
+          <BookShelf project_data={project_data_left} />
         </Content_Panel>
 
         <Content_Panel class_name="main_vert">
@@ -100,18 +106,7 @@ function App() {
         </Content_Panel>
 
         <Content_Panel class_name="right_vert">
-          <Book
-            project_name="Project 3"
-            onClick={() => set_active_book("Project 3")}
-          />
-          <Book
-            project_name="Project 4"
-            onClick={() => set_active_book("Project 4")}
-          />
-          <Book
-            project_name="Project 5"
-            onClick={() => set_active_book("Project 5")}
-          />
+          <BookShelf project_data={project_data_right} />
         </Content_Panel>
       </div>
     </>
