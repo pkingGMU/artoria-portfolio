@@ -7,6 +7,7 @@
 
 body #root {
     height: 100%;
+    width: 100%;
     margin: 0;
     padding: 2rem;
     text-align: center;
@@ -59,26 +60,30 @@ body {
 }
 
 #root .main_vert {
-    height: 100vh;
-    width: 30vw;
-    margin: 0 auto;
+    height: 100%;
+    width: 40vw;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    position: relative;
     align-items: center;
 }
 
 #root .left_vert,
 #root .right_vert {
-    height: 100vh;
-    width: 31vw;
+    height: fit-content;
+
+    padding: 5vh;
+    max-width: 25%;
     margin-right: 10px;
     margin-left: 10px;
+    margin-top: 5vh;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
+    background-color: var(--foreground-main);
+    border: 0.5rem solid;
+    border-radius: 2vw;
 }
 
 ul {
@@ -88,19 +93,28 @@ ul {
     align-items: center;
     width: 100%;
     height: 100%;
-    padding: 0;
     margin: 0;
+    padding: 0;
 }
 
 ul li {
     list-style-type: none;
     background-color: var(--text-color);
-    height: 5%;
-    width: 50%;
+    background-image: url("./assets/Sprites/book_stand.png");
+    background-repeat: repeat;
+    height: 12vh;
+    width: 12vh;
     position: relative;
     display: flex;
     align-items: center;
     flex-direction: row;
+    border: 0.1rem solid;
+    border-radius: 20%;
+    margin-bottom: 10vh;
+}
+
+ul li:last-child {
+    margin-bottom: 0;
 }
 
 .main_box {
@@ -110,7 +124,7 @@ ul li {
     border: 0.5rem solid;
     border-radius: 2vw;
     border-color: var(--text-color);
-    width: 100%;
+    width: 80%;
     padding: 1rem;
 }
 
@@ -135,22 +149,22 @@ ul li {
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
-    margin-top: 10px;
+    margin-top: 5vh;
 }
 
 li h1 {
     font-size: 20px;
     margin: 0;
+    top: 0%;
     line-height: 20px;
     position: absolute;
-    top: -200%;
-    right: 0;
-    left: 0;
     text-align: center;
+    top: -25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 li .book_div {
-    background-color: var(--button-color);
     border-radius: 10%;
     width: 10vh;
     height: 10vh;
@@ -158,7 +172,7 @@ li .book_div {
     align-items: center;
     flex-direction: row;
     position: absolute;
-    top: -10%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
@@ -168,11 +182,12 @@ li .book_div {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: var(--button-color);
     border-color: var(--text-color);
+    border: none;
     height: 100%;
     width: 100%;
     padding: 0;
+    background-color: transparent;
 }
 
 .book_button img {
