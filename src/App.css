@@ -99,17 +99,17 @@ ul {
 
 ul li {
     list-style-type: none;
-    background-color: var(--text-color);
-    background-image: url("./assets/Sprites/book_stand.png");
+    background-color: var(--foreground-main);
     background-repeat: repeat;
-    height: 12vh;
-    width: 12vh;
+    height: 10vh;
+    width: 10vh;
     position: relative;
     display: flex;
     align-items: center;
     flex-direction: row;
-    border: 0.1rem solid;
+    border: 0.5rem solid;
     border-radius: 20%;
+    border-color: var(--foreground-main);
     margin-bottom: 10vh;
 }
 

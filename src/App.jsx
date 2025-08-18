@@ -38,8 +38,13 @@ function App() {
     NIH_ACTIVITY: {
       project_name: "3-Axis Accelerometer Activity Classification",
       description: "Test Description",
+      link: "https://github.com/pkingGMU/NIH-NIA-Women-s-Health",
     },
     AVRO_READER: {
+      project_name: ".AVRO Reader for Empatica Embrace Plus",
+      description: "Test Description",
+    },
+    Project_2: {
       project_name: ".AVRO Reader for Empatica Embrace Plus",
       description: "Test Description",
     },
@@ -50,8 +55,16 @@ function App() {
       project_name: "Bruh",
       description: "Bruh Description",
     },
+
+    Project_4: {
+      project_name: "Bruh 2",
+      description: "Bruh Description",
+    },
+    Project_5: {
+      project_name: "Bruh 2",
+      description: "Bruh Description",
+    },
   };
-  const [active_book, set_active_book] = useState(null);
 
   return (
     <>
@@ -96,13 +109,6 @@ function App() {
               link="https://www.linkedin.com/in/pkinggmu/"
             />
           </div>
-
-          {active_book && (
-            <Popup
-              {...project_data[active_book]}
-              onClose={() => set_active_book(null)}
-            />
-          )}
         </Content_Panel>
 
         <Content_Panel class_name="right_vert">
