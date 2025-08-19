@@ -59,7 +59,7 @@ body {
     justify-content: space-evenly;
 }
 
-#root .main_vert {
+.main_vert {
     height: 100%;
     width: 40vw;
     display: flex;
@@ -232,6 +232,88 @@ li .book_div {
     background-color: rgba(0.1, 0.1, 0, 0.3);
     height: 80%;
     width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.popup_box .popup_h2,
+.popup_p {
+    color: var(--foreground-main);
+    text-shadow: 2px 2px 1px var(--text-color);
+}
+
+.popup_box .popup_p {
+    text-align: justify;
+}
+
+.popup_box .popup_img_div {
+    min-width: 0;
+    max-height: 30%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.popup_img_div img {
+    max-width: 100%;
+    height: 100%;
+}
+
+.popup_box .popup_button {
+    padding: 10px 40px;
+    font-size: 18px;
+    color: var(--foreground-main);
+    text-shadow: 0 2px 0 rgb(0 0 0 / 25%);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border: 0;
+    z-index: 1;
+    user-select: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    white-space: unset;
+    padding: 0.8rem 1.5rem;
+    text-decoration: none;
+    font-weight: 900;
+    transition: all 0.7s cubic-bezier(0, 0.8, 0.26, 0.99);
+}
+
+.popup_button:before {
+    position: absolute;
+    pointer-events: none;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    content: "";
+    transition: 0.7s cubic-bezier(0, 0.8, 0.26, 0.99);
+    z-index: -1;
+    background-color: #333 !important;
+    box-shadow:
+        0 -4px rgb(0 0 0 / 50%) inset,
+        0 4px rgb(255 255 255 / 20%) inset,
+        -4px 0 rgb(255 255 255 / 20%) inset,
+        4px 0 rgb(0 0 0 / 50%) inset;
+}
+
+.popup_button:after {
+    position: absolute;
+    pointer-events: none;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    content: "";
+    box-shadow: 0 4px 0 0 rgb(0 0 0 / 15%);
+    transition: 0.7s cubic-bezier(0, 0.8, 0.26, 0.99);
 }
 
 @keyframes logo-spin {
@@ -251,4 +333,38 @@ li .book_div {
 
 .card {
     padding: 2em;
+}
+
+@media (max-width: 768px) {
+    body #root {
+        padding: 0;
+    }
+    #root .vert_div {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .vert_div .main_vert {
+        order: 0;
+        width: 90vw;
+    }
+
+    .vert_div .left_vert {
+        order: 1;
+    }
+
+    .popup_overlay .popup_box {
+        width: 100%;
+        height: 100%;
+    }
+
+    .popup_box .popup_text_div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .popup_box .popup_p {
+        width: 90%;
+        height: auto;
+    }
 }
