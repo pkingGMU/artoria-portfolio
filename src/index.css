@@ -1,12 +1,12 @@
 @font-face {
-    font-family: 'Yoster';
-    src: url('.assests/font/yoster.tff');
-    font-weight: normal;
-    font-style: normal;
+  font-family: "Yoster";
+  src: url(".assests/font/yoster.tff");
+  font-weight: normal;
+  font-style: normal;
 }
 
 :root {
-  font-family: 'Yoster';
+  font-family: "Yoster";
   line-height: 1.5;
   font-weight: 400;
 
@@ -19,7 +19,6 @@
   --foreground-main: #feeec2;
   --button-color: #b2ba75;
 
-  
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -56,7 +55,6 @@ button:hover {
   border-color: var(--icon-color);
 }
 
-
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
@@ -65,5 +63,4 @@ button:hover {
   a:hover {
     color: #747bff;
   }
-  
 }
