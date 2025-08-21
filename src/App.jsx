@@ -7,6 +7,8 @@ import Book from "./components/Book.jsx";
 import Popup from "./components/Popup.jsx";
 import IconButton from "./components/IconButton.jsx";
 import BookShelf from "./components/BookShelf.jsx";
+import Spritesheet from "react-responsive-spritesheet";
+
 function Content_Panel({ children, class_name }) {
   return <div className={class_name}>{children}</div>;
 }
@@ -105,31 +107,43 @@ function App() {
             message="Languages: C#, Java, Python, Matlab, R, lua"
             message2="Tools: Computer Hardware/Software, OS(Linux, Windows, Mac), System Admin, Git, Emacs, Vicon, Redcap"
           />
-          <div className="social_box">
-            <IconButton
-              img="/assets/Icons/github.svg"
-              alt="GitHub"
-              id="1"
-              link="https://github.com/pkingGMU"
-            />
-            <IconButton
-              img="/assets/Icons/icons8-youtube.svg"
-              alt="YouTube"
-              id="2"
-              link="https://www.youtube.com/@artoria-codes/streams"
-            />
-            <IconButton
-              img="/assets/Icons/icons8-linkedin.svg"
-              alt="LinkedIn"
-              id="3"
-              link="https://www.linkedin.com/in/pkinggmu/"
-            />
-          </div>
         </Content_Panel>
 
         <Content_Panel class_name="right_vert">
           <BookShelf project_data={project_data_right} />
         </Content_Panel>
+      </div>{" "}
+      <div className="cat_wrapper">
+        <Spritesheet
+          className="cat_sprite"
+          image={"/assets/Sprites/cat.png"}
+          widthFrame={32}
+          heightFrame={32}
+          steps={4}
+          fps={10}
+          loop={true}
+          autoplay={true}
+        />
+      </div>
+      <div className="social_box">
+        <IconButton
+          img="/assets/Icons/github.svg"
+          alt="GitHub"
+          id="1"
+          link="https://github.com/pkingGMU"
+        />
+        <IconButton
+          img="/assets/Icons/icons8-youtube.svg"
+          alt="YouTube"
+          id="2"
+          link="https://www.youtube.com/@artoria-codes/streams"
+        />
+        <IconButton
+          img="/assets/Icons/icons8-linkedin.svg"
+          alt="LinkedIn"
+          id="3"
+          link="https://www.linkedin.com/in/pkinggmu/"
+        />
       </div>
     </>
   );
